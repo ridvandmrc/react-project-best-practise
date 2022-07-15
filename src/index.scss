@@ -1,0 +1,35 @@
+@import './style/Theme/theme.scss';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.gallery-input {
+  width: 60rem;
+}
+
+.gallery-button {
+  margin-left: 1rem !important;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    margin-top: 12rem;
+    margin-right: 3rem;
+  }
+}
