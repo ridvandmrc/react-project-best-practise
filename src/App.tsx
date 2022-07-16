@@ -5,6 +5,7 @@ import {
   GalleryButton,
   UploadImage,
 } from './components/atoms';
+import { ImageGallery } from './components/molecules';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           text="Select a File"
         />
       </div>
+      <ImageGallery />
     </div>
   );
 };

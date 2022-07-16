@@ -1,0 +1,33 @@
+@import '../../../style/Alignment/display';
+
+.viewer-container {
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+  margin: 1rem;
+  cursor: pointer;
+  transition: opacity 300ms;
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  img {
+    width: 20rem;
+    height: 20rem;
+    box-shadow: 0px 3px 10px 0px rgb(173 161 161);
+  }
+
+  &:hover {
+    opacity: 0.6;
+    &::after {
+      position: absolute;
+      @include display(flex, center, center);
+      inset: 0;
+      opacity: 0.6;
+      background-color: gray;
+      color: white;
+      font-size: 3rem;
+      content: 'Full Screen';
+    }
+  }
+}
