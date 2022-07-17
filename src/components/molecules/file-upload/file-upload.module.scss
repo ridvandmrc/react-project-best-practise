@@ -1,0 +1,17 @@
+@import '../../../style/Alignment/display';
+
+.file-indicator {
+  width: 60rem;
+  border: 0.2rem solid rgba(179, 174, 174, 0.5);
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  padding-left: 0.5rem;
+  @include display(flex, initial, center);
+  font-size: 1.3rem;
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+
+
+

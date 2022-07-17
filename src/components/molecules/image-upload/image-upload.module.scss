@@ -1,0 +1,29 @@
+@import '../../../style/Alignment/display';
+
+.button-wrapper {
+  position: relative;
+  margin-top: 8rem;
+
+  .upload-button {
+    width: 100%;
+    height: 4rem;
+  }
+
+  .file-input {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  margin-top: 3rem;
+  @include display(flex, center, center);
+
+  img {
+    border-radius: 0.4rem;
+    box-shadow: 0px 3px 10px 0px rgb(173 161 161);
+  }
+}

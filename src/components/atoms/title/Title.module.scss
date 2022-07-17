@@ -2,6 +2,6 @@
 
 .title {
   @include display(flex, center, initial);
-  margin-top: 12rem !important; // To override typography
+  // margin-top: 12rem !important; // To override typography
   color: var(--text-color);
 }

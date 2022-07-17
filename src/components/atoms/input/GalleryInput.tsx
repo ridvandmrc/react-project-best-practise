@@ -11,6 +11,14 @@ export const GalleryInput: FC<Partial<GalleryProps>> = ({
   disabled,
   className,
   label,
+  style,
 }) => {
-  return <TextField label={label} className={className} disabled={disabled} />;
+  return (
+    <TextField
+      style={style as any}
+      label={label}
+      className={className}
+      disabled={disabled}
+    />
+  );
 };

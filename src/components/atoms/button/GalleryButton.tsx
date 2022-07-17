@@ -6,6 +6,7 @@ type GalleryButtonType = {
   variant?: 'text' | 'outlined' | 'contained';
   text: string;
   color?: string;
+  onClick?: () => void;
 } & BaseComponent;
 
 export const GalleryButton: FC<GalleryButtonType> = ({
@@ -13,9 +14,15 @@ export const GalleryButton: FC<GalleryButtonType> = ({
   className,
   variant,
   color,
+  onClick,
 }) => {
   return (
-    <Button className={className} color={color as any} variant={variant}>
+    <Button
+      onClick={onClick}
+      className={className}
+      color={color as any}
+      variant={variant}
+    >
       {text}
     </Button>
   );

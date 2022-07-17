@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { ImageViewer } from '../../atoms';
 
 import style from './image-gallery.module.scss';
 
-export const ImageGallery = () => {
+type ImageGalleryType = {
+  imageList: string[];
+};
+
+export const ImageGallery: FC<ImageGalleryType> = ({ imageList }) => {
   return (
     <div className={style['gallery-container']}>
-      {Array(50)
+      {imageList.map((item, index) => (
+        <ImageViewer key={index} src={item} />
+      ))}
+
+      {Array(20)
         .fill(0)
         .map((item, index) => (
           <ImageViewer

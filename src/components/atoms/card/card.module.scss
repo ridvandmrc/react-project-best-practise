@@ -1,0 +1,20 @@
+.card-wrapper {
+  min-width: 30rem;
+  min-height: 40rem;
+  position: relative;
+  background-color: var(--background);
+  border-radius: 0.8rem;
+  box-shadow: 0px 3px 10px 0px rgb(80, 79, 79);
+  padding: 2rem;
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 2rem;
+    color: var(--foreground);
+  }
+}

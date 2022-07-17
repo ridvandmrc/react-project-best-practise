@@ -1,12 +1,17 @@
 import { Typography } from '@mui/material';
-import React from 'react';
+import React, { FC } from 'react';
+import { BaseComponent } from '../../../utils';
 
-import style from './Title.module.scss';
+import classStyle from './Title.module.scss';
 
-export const Title = () => {
+export const Title: FC<BaseComponent> = ({ children, style }) => {
   return (
-    <Typography variant="h1" className={style.title}>
-      Photo Gallery
+    <Typography
+      variant="h1"
+      style={style as any}
+      className={(classStyle as any).title}
+    >
+      {children || 'Photo Gallery'}
     </Typography>
   );
 };

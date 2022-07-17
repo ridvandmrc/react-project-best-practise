@@ -1,29 +1,26 @@
-import React from 'react';
-import {
-  Title,
-  GalleryInput,
-  GalleryButton,
-  UploadImage,
-} from './components/atoms';
-import { ImageGallery } from './components/molecules';
+import React, { useEffect, useState } from 'react';
+import { Title, UploadImage } from './components/atoms';
+import { FileUpload, ImageGallery } from './components/molecules';
 
 const App = () => {
+  const [images, setImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    console.log(images);
+  }, [images]);
+
   return (
     <div className="App">
       <div className="title">
         <UploadImage />
-        <Title />
+        <Title style={{ marginTop: '12rem' }} />
       </div>
       <div className="gallery">
-        <GalleryInput label="File Upload" className="gallery-input" disabled />
-        <GalleryButton
-          className="gallery-button"
-          color="success"
-          variant="contained"
-          text="Select a File"
+        <FileUpload
+          onChange={(imagePath) => setImages([...images, imagePath])}
         />
       </div>
-      <ImageGallery />
+      <ImageGallery imageList={images} />
     </div>
   );
 };
