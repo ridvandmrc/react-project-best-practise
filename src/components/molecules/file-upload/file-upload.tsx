@@ -11,6 +11,8 @@ type FileUploadType = {
 export const FileUpload: FC<FileUploadType> = ({ onChange }) => {
   const [open, setOpen] = useState(false);
 
+  console.log('file upload');
+
   return (
     <>
       <div className={style['file-indicator']} onClick={() => setOpen(!open)}>

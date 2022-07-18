@@ -31,3 +31,7 @@
     }
   }
 }
+
+.backdrop {
+  transition: visibility, opacity 300ms ease-in-out;
+}

@@ -7,6 +7,5 @@ type BackdropType = {
 } & BaseComponent;
 
 export const BackdropGallery: FC<BackdropType> = ({ children, open }) => {
-  console.log('backdrop open');
   return <Backdrop open={open}>{children}</Backdrop>;
 };

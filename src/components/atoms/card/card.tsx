@@ -1,18 +1,23 @@
 import React, { FC } from 'react';
 import { BaseComponent } from '../../../utils';
 
-import style from './card.module.scss';
+import cardStyle from './card.module.scss';
 
 type CardType = {
   closeButton?: boolean;
   closeClick?: () => void;
 } & BaseComponent;
 
-export const Card: FC<CardType> = ({ closeButton, children, closeClick }) => {
+export const Card: FC<CardType> = ({
+  closeButton,
+  children,
+  closeClick,
+  style,
+}) => {
   return (
-    <div className={style['card-wrapper']}>
+    <div style={style as any} className={cardStyle['card-wrapper']}>
       {closeButton && (
-        <button onClick={() => closeClick?.()} className={style.close}>
+        <button onClick={() => closeClick?.()} className={cardStyle.close}>
           X
         </button>
       )}
