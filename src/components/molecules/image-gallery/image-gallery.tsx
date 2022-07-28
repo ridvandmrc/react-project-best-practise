@@ -8,7 +8,6 @@ type ImageGalleryType = {
 };
 
 export const ImageGallery: FC<ImageGalleryType> = ({ imageList }) => {
-  console.log('image gallery');
   return (
     <div className={style['gallery-container']}>
       {imageList.map((item, index) => (
